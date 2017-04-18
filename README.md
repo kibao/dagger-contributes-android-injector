@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kibao/dagger-contributes-android-injector.svg?branch=master)](https://travis-ci.org/kibao/dagger-contributes-android-injector)
+
 During building `app` module, the following error is thrown:
 
     :app:compileDebugJavaWithJavac
