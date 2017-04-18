@@ -12,6 +12,15 @@ android:
 jdk:
   - oraclejdk8
 
+env:
+  global:
+    - TOOLS=${ANDROID_HOME}/tools
+    - PATH=${ANDROID_HOME}:${ANDROID_HOME}/emulator:${TOOLS}:${TOOLS}/bin:${ANDROID_HOME}/platform-tools:${PATH}
+
+install:
+  - echo yes | sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2"
+  - echo yes | sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2"
+
 script:
   - ./gradlew :app-generated-injector:assembleDebug
   - ./gradlew :app:assembleDebug
